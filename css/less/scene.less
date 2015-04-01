@@ -406,20 +406,21 @@ body {
             height: 8%;
             display: block;
             left: 30%;
-            background-image: radial-gradient(ellipse 100% 100% at 50%, black 30%, transparent 50%);
+
+            .radial-gradient(black, 30%, transparent, 50%);
 
             &:after {
                 content: '';
-                background-image: radial-gradient(ellipse 100% 100% at 50%, black 30%, transparent 50%);
                 width: 50%;
                 height: 50%;
                 display: block;
                 position: absolute;
                 left: 25%;
                 top: 260%;
-                TRANSFORM: rotate(-5deg) translate3d(0, 0, 0);
-            }
 
+                .radial-gradient(black, 30%, transparent, 50%);
+                .transform(rotate(-5deg));
+            }
 
         }
 
@@ -434,8 +435,6 @@ body {
     margin-left: -100%;
     top: 0;
     bottom: 0;
-
-//    .linear-gradient(0%, black, 50%, transparent);
 }
 
 

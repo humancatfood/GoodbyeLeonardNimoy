@@ -111,11 +111,26 @@
 }
 
 
-.radial-gradient(@posX, @posY, @sizeX, @sizeY, @from, @fromPercent, @to, @toPercent) {
-    background-image: -webkit-radial-gradient(@posX @posY, @sizeX @sizeY, @from @fromPercent, @to @toPercent);
-    background-image:    -moz-radial-gradient(@posX @posY, @sizeX @sizeY, @from @fromPercent, @to @toPercent);
-    background-image:     -ms-radial-gradient(@posX @posY, @sizeX @sizeY, @from @fromPercent, @to @toPercent);
-    background-image:      -o-radial-gradient(@posX @posY, @sizeX @sizeY, @from @fromPercent, @to @toPercent);
+.radial-gradient(@col1, @per1, @col2, @per2) {
+    background: @col1; /* Old browsers */
+
+    background: -moz-radial-gradient(center, ellipse cover,  @col1 @per1, @col2 @per2); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(@per1, @col1), color-stop(@per2, @col2)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, @col1 @per1, @col2 @per2); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, @col1 @per1,  @col2 @per2); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, @col1 @per1,  @col2 @per2); /* IE10+ */
+    background: radial-gradient(ellipse at center, @col1 @per1,  @col2 @per2); /* W3C */
+}
+
+.radial-gradient(@col1, @per1, @col2, @per2, @col3, @per3) {
+    background: @col1; /* Old browsers */
+
+    background: -moz-radial-gradient(center, ellipse cover,  @col1 @per1, @col2 @per2, @col3, @per3); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(@per1, @col1), color-stop(@per2, @col2), color-stop(@per3, @col3)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, @col1 @per1, @col2 @per2, @col3, @per3); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, @col1 @per1,  @col2 @per2, @col3, @per3); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, @col1 @per1,  @col2 @per2, @col3, @per3); /* IE10+ */
+    background: radial-gradient(ellipse at center, @col1 @per1,  @col2 @per2, @col3, @per3); /* W3C */
 }
 
 .linear-gradient(@stop1, @color1, @stop2, @color2) {
